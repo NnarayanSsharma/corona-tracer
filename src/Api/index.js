@@ -7,6 +7,6 @@ export const fetchData = async() => {
         const response = await axios.get(url)
         return response
     } catch (error) {
-        
+        console.log(error)
     }
 }

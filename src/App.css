@@ -1,0 +1,129 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+.cards{
+    margin: 0 auto;
+    width: 850px;
+    display: grid;
+    text-align: center;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    grid-gap: 1rem;
+
+}
+.cards .infected{
+    padding: 1rem;
+    border-bottom: solid 5px blue;
+}
+
+.cards .recovered{
+    padding: 1rem;
+    border-bottom: solid 5px #00FF00;
+}
+
+.cards .deaths{
+    padding: 1rem;
+    border-bottom: solid 5px red;
+}
+
+.cards .number{
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.cards .date{
+    font-size: 15px;
+    margin-bottom: 0;
+}
+
+.cards .name{
+    font-size: 20px;
+    margin-bottom: 0;
+}
+
+
+@media (max-width: 960px){
+    .cards{
+        width: 800px;
+        grid-template-columns: repeat(3, minmax(200px, 1fr));
+    }
+    .cards .number{
+        padding: 0;
+        font-size: 35px;
+        font-weight: 700;
+    }
+    .cards .date{
+        font-size: 15px;
+        padding: 0;
+    }
+    .cards .name{
+        font-size: 15px;
+        padding: 0;
+    }
+}
+
+@media (max-width: 768px){
+    .cards{
+        width: 600px;
+        grid-template-columns: repeat(3, minmax(150px, 1fr));
+    }
+    .cards .number{
+        padding: 0;
+        font-size: 30px;
+        font-weight: 700;
+    }
+    .cards .date{
+        font-size: 10px;
+        padding: 0;
+    }
+    .cards .name{
+        font-size: 10px;
+        padding: 0;
+    }
+}
+
+@media (max-width: 640px){
+    .cards{
+        width: 400px;
+        grid-template-columns: repeat(3, minmax(100px, 1fr));
+    }
+    .cards .number{
+        padding: 0;
+        font-size: 25px;
+        font-weight: 700;
+    }
+    .cards .date{
+        font-size: 10px;
+        padding: 0;
+    }
+    .cards .name{
+        font-size: 10px;
+        padding: 0;
+    }
+}
+@media (max-width: 320px){
+    .cards{
+        width: 280px;
+        grid-template-columns: repeat(3, minmax(75px, 1fr));
+    }
+    .cards .number{
+        padding: 0;
+        font-size: 20px;
+        font-weight: 700;
+        margin: 0;
+    }
+    .cards .date{
+        font-size: 10px;
+        padding: 0;
+        margin: 0;
+    }
+    .cards .name{
+        font-size: 10px;
+        padding: 0;
+        margin: 0;
+    }
+}

@@ -44,7 +44,75 @@ body{
     font-size: 20px;
     margin-bottom: 0;
 }
+.chart{
+    width: 75%;
+    margin: 10px auto;
+}
 
+.App .image{
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+    width: 80%;
+    height: 125px;
+    /* background-size: cover; */
+
+    box-shadow: 11px 10px 41px 0px rgba(44,44,191,1);
+    /* position: absolute; */
+    /* background: #fff url("./maxresdefault.jpg") no-repeat fixed center; */
+    /* object-fit: cover; */
+}
+.App .image img{
+    max-width: 100%;
+    /* max-height: 100%; */
+}
+
+.country-selector{
+    margin: 20px auto 40px;
+    width: 50%;
+    height: 10px;
+}
+
+.country-selector select{
+    /* background-color: rgb(110, 110, 212); */
+    background-color: grey;
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 10px;
+}
+
+
+
+/* select input field */
+
+/* create loader */
+.loader {
+    /* position: absolute; */
+    margin: 30% auto;
+    align-items: center;
+    border: 10px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 10px solid blue;
+    border-right: 10px solid green;
+    border-bottom: 10px solid red;
+    border-left: 10px solid pink;
+    width: 40px;
+    height: 40px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+  }
+  
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
 
 @media (max-width: 960px){
     .cards{
@@ -57,11 +125,11 @@ body{
         font-weight: 700;
     }
     .cards .date{
-        font-size: 15px;
+        font-size: 17px;
         padding: 0;
     }
     .cards .name{
-        font-size: 15px;
+        font-size: 17px;
         padding: 0;
     }
 }
@@ -77,53 +145,33 @@ body{
         font-weight: 700;
     }
     .cards .date{
-        font-size: 10px;
+        font-size: 17px;
         padding: 0;
     }
     .cards .name{
-        font-size: 10px;
+        font-size: 17px;
         padding: 0;
+    }
+    .App .image{
+        height: 100px;
     }
 }
 
 @media (max-width: 640px){
     .cards{
-        width: 400px;
-        grid-template-columns: repeat(3, minmax(100px, 1fr));
+        width: 80%;
+        grid-template-columns: repeat(1, minmax(100px, 1fr));
     }
-    .cards .number{
-        padding: 0;
-        font-size: 25px;
-        font-weight: 700;
-    }
-    .cards .date{
-        font-size: 10px;
-        padding: 0;
-    }
-    .cards .name{
-        font-size: 10px;
-        padding: 0;
+    .App .image{
+        height: 100px;
     }
 }
 @media (max-width: 320px){
     .cards{
-        width: 280px;
-        grid-template-columns: repeat(3, minmax(75px, 1fr));
+        width: 80%;
+        grid-template-columns: repeat(1, minmax(75px, 1fr));
     }
-    .cards .number{
-        padding: 0;
-        font-size: 20px;
-        font-weight: 700;
-        margin: 0;
-    }
-    .cards .date{
-        font-size: 10px;
-        padding: 0;
-        margin: 0;
-    }
-    .cards .name{
-        font-size: 10px;
-        padding: 0;
-        margin: 0;
+    .App .image{
+        height: 100px;
     }
 }

@@ -2,9 +2,13 @@ import React from 'react'
 import CountUp from 'react-countup'
 
 
-const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate }}) => {
+// const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate }}) => {
+const Cards = (props) => {
+
+    const { confirmed, recovered, deaths, lastUpdate } = props.data
     if(!confirmed){
-        return 'Loading...'
+        // return 'Loading...'
+        return (<div class="loader"></div>)
     }
     // console.log(props)
     return (
@@ -14,7 +18,7 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate }}) => {
                     <CountUp
                         start={0}
                         end={confirmed.value}
-                        duration={2.0}
+                        duration={3.0}
                         separator=","
                     />
                 </p>
@@ -26,7 +30,7 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate }}) => {
                     <CountUp
                         start={0}
                         end={recovered.value}
-                        duration={2.0}
+                        duration={3.0}
                         separator=","
                     />
                 </p>
@@ -38,7 +42,7 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate }}) => {
                     <CountUp
                         start={0}
                         end={deaths.value}
-                        duration={2.0}
+                        duration={3.0}
                         separator=","
                     />
                 </p>
